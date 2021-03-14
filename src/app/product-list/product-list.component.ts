@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { products } from "../products";
 
 @Component({
   selector: 'app-product-list',
@@ -6,5 +7,9 @@ import { Component } from "@angular/core";
 })
 
 export class ProductListComponent {
+  products = products;
 
+  share() {
+    alert('The product has been shared!');
+  };
 }
