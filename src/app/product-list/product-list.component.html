@@ -3,11 +3,13 @@
 <div *ngFor="let product of products">
 
   <h3>
+    <!-- Property binding [ ] lets you use the property value in a template expression -->
     <a [title]="product.name + ' details'">
       {{ product.name }}
     </a>
   </h3>
 
+  <!-- *ngIf directive so that Angular only creates the <p> element if the current product has a description -->
   <p *ngIf="product.description">
     Description: {{ product.description }}
   </p>
